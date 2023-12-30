@@ -1,0 +1,30 @@
+﻿@model List<MyMongoDbAndAjaxProject.DAL.Entities.Testimonial>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Referans Listeleme Sayfası</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Referans Ad Soyad</th>
+        <th>Referans Başlık</th>
+        <th>Referans Açıklama</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TestimonialID</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Title</td>
+            <td>@item.Description</td>
+            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item." class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Testimonial/CreateTestimonial">Yeni Referans Girişi</a>

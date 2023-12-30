@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_UILayoutHeadComponentPartial")
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!-- Spinner Start -->
+    @await Component.InvokeAsync("_UILayoutSpinnerComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutNavbarComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutHeaderComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutVideModalComponetPartial")
+
+    @await Component.InvokeAsync("_UILayoutAboutComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutExpertiseComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutServiceComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutProjectComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutTeamComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutTestimonialComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutContactComponentPartial")
+
+    @await Component.InvokeAsync("_UILayoutMapComponentPartial")
+ 
+    @await Component.InvokeAsync("_UILayoutCopyrightComponetPartial")
+   
+    @await Component.InvokeAsync("_UILayoutScriptComponentPartial")
+   
+</body>
+
+</html>
+
