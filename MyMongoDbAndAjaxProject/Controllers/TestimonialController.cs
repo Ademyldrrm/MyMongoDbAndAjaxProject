@@ -36,5 +36,17 @@ namespace MyMongoDbAndAjaxProject.Controllers
              await _testimonialCollection.DeleteOneAsync(x => x.TestimonialID == id);
             return RedirectToAction("Index");
         }
+        [HttpGet]
+        public async Task<IActionResult> UpdateTestimonial(string id)
+        {
+            var values = await _testimonialCollection.Find(x => x.TestimonialID == id).FirstOrDefaultAsync();
+            return View(values);
+        }
+        [HttpPost]
+        public async Task<IActionResult> UpdateTestimonial(Testimonial testimonial)
+        {
+            await _testimonialCollection.FindOneAndReplaceAsync(x => x.TestimonialID == testimonial.TestimonialID,testimonial);
+            return RedirectToAction("Index");
+        }
     }
 }

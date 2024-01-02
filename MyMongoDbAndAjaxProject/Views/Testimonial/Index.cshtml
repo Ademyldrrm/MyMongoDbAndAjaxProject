@@ -2,13 +2,15 @@
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
 }
 
 <h1>Referans Listeleme Sayfası</h1>
 
 <table class="table table-bordered">
     <tr>
-        <th>#</th>
+        <th>Numara</th>
+        <td>#</td>
         <th>Referans Ad Soyad</th>
         <th>Referans Başlık</th>
         <th>Referans Açıklama</th>
@@ -17,13 +19,15 @@
     </tr>
     @foreach (var item in Model)
     {
+        count++;
         <tr>
+            <td>@count</td>
             <td>@item.TestimonialID</td>
             <td>@item.NameSurname</td>
             <td>@item.Title</td>
             <td>@item.Description</td>
             <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/Testimonial/UpdateTestimonial/@item." class="btn btn-success">Güncelle</a></td>
+            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-success">Güncelle</a></td>
         </tr>
     }
 </table>

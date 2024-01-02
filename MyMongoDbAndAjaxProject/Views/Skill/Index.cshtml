@@ -1,0 +1,109 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<div class="container mt-4">
+    <h3>İşlemler</h3>
+    <div class="action-buttons">
+        <button type="button" id="btnskilllist" class="btn btn-primary">Yetenek Listesi</button>
+        <button type="button" id="btnskillcreate" class="btn btn-info">Yetenek Ekle</button>
+        <button type="button" id="btnskilldelete" class="btn btn-danger">Yetenek Sil</button>
+        <button type="button" id="btnskillget" class="btn btn-primary">Yetenek Getir</button>
+        <button type="button" id="btnskillupdate" class="btn btn-success">Yetenek Güncelle</button>
+    </div>
+</div>
+
+
+<br />
+<hr />
+<div class="container mt-4">
+    <h3>Personel Listesi</h3>
+    <div id="skilllist"></div>
+</div>
+
+<div class="container mt-4">
+    <h3>Yetenek Girişi</h3>
+    <div>
+        <input  type="text" class="form-control" placeholder="Yetenek Adı" id="txtname"/>
+        <br />
+        <input type="text" class="form-control" placeholder="Yetenek Değeri" id="txtvalue" />
+    </div>
+</div>
+
+<br />
+<br />
+<div>
+    <h3>Yetenek Silme Alanı</h3>
+    <input type="text" placeholder="Silmek İstediğiniz Personel id" class="form-control" id="btnskilldeleteid" />
+</div>
+<br />
+<br />
+<script>
+
+    $("#btnskilllist").click(function () {
+        $.ajax({
+            contentType: "application/json",
+            dataType: "json",
+            type: "GET",
+            url: "/Skill/SkillList",
+            success: function (data) {
+                let values = jQuery.parseJSON(data);
+                console.log(values);
+
+                let tablehtml = `<table class="table table-bordered">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Yetenek ID</th>
+                                                <th>Yetenek Adı</th>
+                                                <th>Yetenek Değeri</th>
+                                               
+                                            </tr>
+                                        </thead>
+                                        <tbody>`;
+
+                $.each(values, (index, value) => {
+                    tablehtml += `<tr>
+                                        <td>${value.SkillID}</td>
+                                        <td>${value.SkillName}</td>
+                                        <td>${value.SkillValue}</td>
+                                       
+                                      </tr>`;
+                });
+
+                tablehtml += `</tbody></table>`;
+                $("#skilllist").html(tablehtml);
+
+            }
+        });
+    });
+    $("#btnskillcreate").click(function () {
+        let skillvalues = {
+            SkillName: $("#txtname").val(),
+            SkillValue: $("#txtvalue").val()
+        };
+        $.ajax({
+            type: "post",
+            url: "/Skill/CreateSkill/",
+            data: skillvalues,
+            success: function (funk2) {
+                let result = jQuery.parseJSON(funk2);
+                alert("Yetenek Eklendi");
+            }
+        });
+    });
+
+    $("#btnskilldelete").click(function () {
+        let id = $("#btnskilldeleteid").val();
+        $.ajax({
+            url: "/Skill/DeleteSkill/" + id,
+            type: "Get",
+            contentType: "application/json",
+            success: function (funk4) {
+                swal("Yetenek Başarıyla Silindi");
+            }
+        });
+    });
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>

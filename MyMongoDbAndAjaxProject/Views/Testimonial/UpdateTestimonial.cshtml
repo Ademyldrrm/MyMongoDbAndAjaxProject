@@ -1,0 +1,24 @@
+﻿@model MyMongoDbAndAjaxProject.DAL.Entities.Testimonial
+@{
+    ViewData["Title"] = "UpdateTestimonial";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>UpdateTestimonial</h1>
+
+<form method="post">
+    <input  type="hidden" asp-for="TestimonialID"/>
+    <lable>Referans Ad Soyad</lable>
+    <input type="text" asp-for="NameSurname" class="form-control" />
+    <br />
+    <lable>Referans Başlık</lable>
+    <input type="text" asp-for="Title" class="form-control" />
+    <br />
+    <lable>Referans Açıklama</lable>
+    <input type="text" asp-for="Description" class="form-control" />
+    <br />
+    <lable>Referans Resim</lable>
+    <input type="text" asp-for="ImageUrl" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Referans Güncelle</button>
+</form>

@@ -234,3 +234,4 @@ C:\Users\AdemYildirim\source\repos\MyMongoDbAndAjaxProject\MyMongoDbAndAjaxProje
 C:\Users\AdemYildirim\source\repos\MyMongoDbAndAjaxProject\MyMongoDbAndAjaxProject\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
 C:\Users\AdemYildirim\source\repos\MyMongoDbAndAjaxProject\MyMongoDbAndAjaxProject\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\AdemYildirim\source\repos\MyMongoDbAndAjaxProject\MyMongoDbAndAjaxProject\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
+C:\Users\AdemYildirim\source\repos\MyMongoDbAndAjaxProject\MyMongoDbAndAjaxProject\obj\Debug\net7.0\MyMongoDbAndAjaxProject.sourcelink.json
