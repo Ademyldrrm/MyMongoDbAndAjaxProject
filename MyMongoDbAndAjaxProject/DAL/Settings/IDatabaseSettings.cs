@@ -11,5 +11,7 @@
         public string ContactInformationCollectionName { get; set; }
         public string ExperienceCollectionName { get; set; }
         public string EdicationCollectionName { get; set; }
+        public string ProjectCollectionName { get; set; }
+        public string RegisterCollectionName { get; set; }
     }
 }

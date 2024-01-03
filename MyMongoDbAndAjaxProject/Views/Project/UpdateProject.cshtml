@@ -1,0 +1,31 @@
+﻿@model Project
+@{
+    ViewData["Title"] = "UpdateProject";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Proje Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input  type="hidden" asp-for="ProjectID"/>
+    <label>Resim1</label>
+    <input type="text" asp-for="Image1" class="form-control" />
+    <br />
+    <label>Resim2</label>
+    <input type="text" asp-for="Image2" class="form-control" />
+    <br />
+    <label>Resim3</label>
+    <input type="text" asp-for="Image3" class="form-control" />
+    <br />
+    <label>Resim4</label>
+    <input type="text" asp-for="Image4" class="form-control" />
+    <br />
+    <label>Resim5</label>
+    <input type="text" asp-for="Image5" class="form-control" />
+    <br />
+    <label>Resim6</label>
+    <input type="text" asp-for="Image6" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-primary">Proje Güncelleme</button>
+</form>

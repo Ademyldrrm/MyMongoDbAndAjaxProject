@@ -1,0 +1,42 @@
+﻿@model List<Project>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Index</h1>
+
+
+<table class="table table-bordered">
+    <tr>
+        <th>Numara</th>
+        <td>#</td>
+        <th>Resim1</th>
+        <th>Resim2</th>
+        <th>Resim3</th>
+        <th>Resim4</th>
+        <th>Resim5</th>
+        <th>Resim6</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.ProjectID</td>
+            <td>@item.Image1</td>
+            <td>@item.Image2</td>
+            <td>@item.Image3</td>
+            <td>@item.Image4</td>
+            <td>@item.Image5</td>
+            <td>@item.Image6</td>
+            <td><a href="/Project/DeleteProject/@item.ProjectID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Project/UpdateProject/@item.ProjectID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Project/CreateProject">Yeni Proje Girişi</a>
+

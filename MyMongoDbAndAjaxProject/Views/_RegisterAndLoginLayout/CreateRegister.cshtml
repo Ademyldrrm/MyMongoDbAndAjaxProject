@@ -1,0 +1,20 @@
+﻿@model Register
+@{
+    ViewData["Title"] = "CreateRegister";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>CreateRegister</h1>
+
+<form method="post">
+    <lable>Ad Soyad</lable>
+    <input type="text" asp-for="NameSurname" class="form-control" />
+    <br />
+    <lable>E Mail</lable>
+    <input type="text" asp-for="EMail" class="form-control" />
+    <br />
+    <lable>Şifre</lable>
+    <input type="text" asp-for="Password" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Admin Ekle</button>
+</form>

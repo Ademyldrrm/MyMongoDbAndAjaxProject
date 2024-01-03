@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyMongoDbAndAjaxProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0549050ec8e4123a820fda45e9fe4f8d25dd8ba6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1221f074a07b21bffa98a2bf5135cb6084fb1174")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyMongoDbAndAjaxProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyMongoDbAndAjaxProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
