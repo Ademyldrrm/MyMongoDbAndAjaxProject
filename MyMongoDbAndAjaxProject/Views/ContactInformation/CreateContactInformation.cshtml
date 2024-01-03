@@ -1,0 +1,19 @@
+﻿@model ContactInformation
+@{
+    ViewData["Title"] = "CreateContactInformation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>İletişim Bilgileri Ekleme Sayfası</h1>
+<form method="post">
+    <lable>Adres</lable>
+    <input type="text" asp-for="Adress" class="form-control" />
+    <br />
+    <lable>Telefon</lable>
+    <input type="text" asp-for="Phone" class="form-control" />
+    <br />
+    <lable>Mail</lable>
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Referans Ekle</button>
+</form>

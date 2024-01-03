@@ -1,0 +1,24 @@
+﻿@model Edication
+@{
+    ViewData["Title"] = "UpdateEdication";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Eğitim Güncelleme Sayfası</h1>
+
+<form method="post">
+    <input  type="hidden" asp-for="EdicationID"/>
+    <lable>Eğitim Başlık</lable>
+    <input type="text" asp-for="EdicationTitle" class="form-control" />
+    <br />
+    <lable>Okul</lable>
+    <input type="text" asp-for="School" class="form-control" />
+    <br />
+    <lable>Başlangıç Tarihi</lable>
+    <input type="text" asp-for="StartingDate" class="form-control" />
+    <br />
+    <lable>Bitiş Tarihi</lable>
+    <input type="text" asp-for="EndDate" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Eğitim Güncelle</button>
+</form>

@@ -1,0 +1,35 @@
+﻿@model List<Edication>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Eğitim Listeleme Sayfası</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Numara</th>
+        <td>#</td>
+        <th>Eğitim Başlık</th>
+        <th>Okul</th>
+        <th>Başlangıç Tarihi</th>
+        <th>Bitiş Tarihi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.EdicationID</td>
+            <td>@item.EdicationTitle.</td>
+            <td>@item.School</td>
+            <td>@item.StartingDate.ToString("dd-MMM-yyyy")</td>
+            <td>@item.EndDate.ToString("dd-MMM-yyyy")</td>
+            <td><a href="/Edication/DeleteEdication/@item.EdicationID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Edication/UpdateEdication/@item.EdicationID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Edication/CreateEdication">Yeni Deneyim Girişi</a>

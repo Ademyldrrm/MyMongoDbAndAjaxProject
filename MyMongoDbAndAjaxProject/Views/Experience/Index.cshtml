@@ -1,0 +1,35 @@
+﻿@model List<Experience>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Deneyim Listeleme Sayfası</h1>
+<table class="table table-bordered">
+    <tr>
+        <th>Numara</th>
+        <td>#</td>
+        <th>Deneyim Başlık</th>
+        <th>Görevi</th>
+        <th>Başlangıç Tarihi</th>
+        <th>Bitiş Tarihi</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.ExperienceID</td>
+            <td>@item.ExperienceTitle.</td>
+            <td>@item.Task</td>
+            <td>@item.StartingDate.ToString("dd-MMM-yyyy")</td>
+            <td>@item.EndDate.ToString("dd-MMM-yyyy")</td>
+            <td><a href="/Experience/DeleteExperience/@item.ExperienceID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Experience/UpdateExperience/@item.ExperienceID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Experience/CreateExperience">Yeni Deneyim Girişi</a>

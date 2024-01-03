@@ -18,6 +18,42 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\AdemYildirim\source\repos\MyMongoDbAndAjaxProject\MyMongoDbAndAjaxProject
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/ContactInformation/CreateContactInformation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEluZm9ybWF0aW9uXENyZWF0ZUNvbnRhY3RJbmZvcm1hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/ContactInformation/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdEluZm9ybWF0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Edication/CreateEdication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpY2F0aW9uXENyZWF0ZUVkaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Edication/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpY2F0aW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Edication/UpdateEdication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWRpY2F0aW9uXFVwZGF0ZUVkaWNhdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Experience/CreateExperience.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVxDcmVhdGVFeHBlcmllbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Experience/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Experience/UpdateExperience.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXhwZXJpZW5jZVxVcGRhdGVFeHBlcmllbmNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,6 +72,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Service/UpdateService.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VydmljZVxVcGRhdGVTZXJ2aWNlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Shared/Components/_ExpertiseEdicationComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0V4cGVydGlzZUVkaWNhdGlvbkNvbXBvbmVudFBhcnRpYWxcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Shared/Components/_ExpertiseExperienceComponentPartial/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcX0V4cGVydGlzZUV4cGVyaWVuY2VDb21wb25lbnRQYXJ0aWFsXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/AdemYildirim/source/repos/MyMongoDbAndAjaxProject/MyMongoDbAndAjaxProject/Views/Shared/Components/_UILayoutAboutComponentPartial/Default.cshtml]

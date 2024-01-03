@@ -34,9 +34,21 @@ namespace MyMongoDbAndAjaxProject.Controllers
             var values=JsonConvert.SerializeObject(skill);
             return Json(values);
         }
+
+        public async Task<IActionResult> Getskill(string skillid)
+        {
+            var values =await _skillCollection.Find(x => x.SkillID == skillid).FirstOrDefaultAsync();
+            var jsonValues=JsonConvert.SerializeObject(values);
+            return Json(jsonValues);
+        }
         public async Task<IActionResult> DeleteSkill(string id)
         {
-            await _skillCollection.DeleteOneAsync(x=>x.SkillID==id);
+            await _skillCollection.DeleteOneAsync(x => x.SkillID == id);
+            return NoContent();
+        }
+        public async Task<IActionResult> UpdateSkill(Skill skill)
+        {
+            var values = await _skillCollection.FindOneAndReplaceAsync(x => x.SkillID == skill.SkillID, skill);
             return NoContent();
         }
     }

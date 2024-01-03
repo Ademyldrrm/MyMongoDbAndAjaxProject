@@ -7,5 +7,9 @@
         public string TestimonialCollectionName { get; set; }
         public string ServiceCollectionName { get; set; }
         public string SkillCollectionName { get; set; }
+        public string ContactCollectionName { get; set; }
+        public string ContactInformationCollectionName { get; set; }
+        public string ExperienceCollectionName { get; set; }
+        public string EdicationCollectionName { get; set; }
     }
 }

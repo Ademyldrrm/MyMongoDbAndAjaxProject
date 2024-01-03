@@ -15,31 +15,49 @@
     </div>
 </div>
 
-
-<br />
 <hr />
+
 <div class="container mt-4">
-    <h3>Personel Listesi</h3>
+    <h3>Yetenek Listesi</h3>
     <div id="skilllist"></div>
+</div>
+
+<hr />
+
+<div class="container mt-4">
+    <h3>Yetenek Getir</h3>
+    <div class="input-group">
+        <input type="text" placeholder="Getirmek İstediğiniz Yetenek İd Gir" class="form-control" id="txtskillid" />
+        
+    </div>
+    <div id="skillbyid"></div>
 </div>
 
 <div class="container mt-4">
     <h3>Yetenek Girişi</h3>
-    <div>
-        <input  type="text" class="form-control" placeholder="Yetenek Adı" id="txtname"/>
-        <br />
-        <input type="text" class="form-control" placeholder="Yetenek Değeri" id="txtvalue" />
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Yetenek Adı" id="txtname" />
+        <input type="text" class="form-control mt-2" placeholder="Yetenek Değeri" id="txtvalue" />
     </div>
 </div>
 
-<br />
-<br />
-<div>
+<div class="container mt-4">
     <h3>Yetenek Silme Alanı</h3>
-    <input type="text" placeholder="Silmek İstediğiniz Personel id" class="form-control" id="btnskilldeleteid" />
+    <div class="input-group">
+        <input type="text" placeholder="Silmek İstediğiniz Personel id" class="form-control" id="btnskilldeleteid" />
+        
+    </div>
 </div>
-<br />
-<br />
+
+<div class="container mt-4">
+    <h3>Yetenek Güncelleme Alanı</h3>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Güncellenecek Yetenek ID" id="txteditid" />
+        <input type="text" class="form-control mt-2" placeholder="Güncellenecek Yetenek Adı" id="txtnameedit" />
+        <input type="text" class="form-control mt-2" placeholder="Güncellenecek Yetenek Değeri" id="txtvalueedit" />
+    </div>
+</div>
+
 <script>
 
     $("#btnskilllist").click(function () {
@@ -77,7 +95,7 @@
 
             }
         });
-    });
+    });//Listeleme
     $("#btnskillcreate").click(function () {
         let skillvalues = {
             SkillName: $("#txtname").val(),
@@ -92,7 +110,7 @@
                 alert("Yetenek Eklendi");
             }
         });
-    });
+    });//Ekleme
 
     $("#btnskilldelete").click(function () {
         let id = $("#btnskilldeleteid").val();
@@ -104,6 +122,50 @@
                 swal("Yetenek Başarıyla Silindi");
             }
         });
+    });//Silme
+
+    $("#btnskillget").click(function () {
+        let id = $("#txtskillid").val();
+        $.ajax({
+            contentType: "application/json",
+            dataType:"json",
+            url: "/Skill/Getskill/",
+            data: { skillid: id },
+            success: function (funk3) {
+                let result = jQuery.parseJSON(funk3);
+                console.log(result);
+                let htmlstr=`<table class=table table-hover>
+                <tr>
+                <th>Yetenek ID</th>
+                <th>Yetenek Adı</th>
+                <th>Yetenek Değeri</th>
+                </tr>
+                <tr>
+                <td>${result.SkillID}</td>
+                <td>${result.SkillName}</td>
+                <td>${result.SkillValue}</td>
+                    </tr>
+                    </table>`;
+                $("#skillbyid").html(htmlstr);
+            }
+        });
+    });//Getirme id ye göre
+
+    $("#btnskillupdate").click(function () {
+        let values = {
+            SkillID:$("#txteditid").val(),
+            SkillName:$("#txtnameedit").val(),
+            SkillValue:$("#txtvalueedit").val()
+        };
+        $.ajax({
+            url: "/Skill/UpdateSkill",
+            type:"post",
+            data: values,
+            success: function (funk5) {
+                swal("Güncelleme Başarılı bir şekilde gerçekleşti");
+            }
+        });
     });
+
 </script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
