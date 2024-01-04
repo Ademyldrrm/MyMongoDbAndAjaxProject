@@ -1,0 +1,20 @@
+﻿@model Statistic
+@{
+    ViewData["Title"] = "CreateStatistic";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>CreateStatistic</h1>
+
+<form method="post">
+    <lable>İstatistik Adı</lable>
+    <input type="text" asp-for="StatisticName" class="form-control" />
+    <br />
+    <lable>Değeri</lable>
+    <input type="text" asp-for="StatisticValue" class="form-control" />
+    <br />
+    <lable>Açıklaması</lable>
+    <input type="text" asp-for="StatisticDescription" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">İstatistik Ekle</button>
+</form>

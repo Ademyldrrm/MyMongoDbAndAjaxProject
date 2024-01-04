@@ -1,4 +1,5 @@
 ﻿@model List<Contact>
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -14,6 +15,7 @@
         <th>Gönderen Mail</th>
         <th>Konu</th>
         <th>Mesaj</th>
+        <th>Kategori</th>
         <th>Sil</th>
     </tr>
     @foreach (var item in Model)
@@ -26,6 +28,7 @@
             <td>@item.EMail</td>
             <td>@item.Subject</td>
             <td>@item.Message</td>
+            <td>@item.MessageCategoryID</td>
             <td><a href="/Contact/DeleteContact/@item.ContactID" class="btn btn-danger">Sil</a></td>
 
         </tr>

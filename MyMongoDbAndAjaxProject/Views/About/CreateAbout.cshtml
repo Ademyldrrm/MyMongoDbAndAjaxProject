@@ -1,0 +1,17 @@
+﻿@model About
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Hakkımda Ekleme Sayfası</h1>
+
+<form method="post">
+    <lable>Açıklama</lable>
+    <input type="text" asp-for="AboutDescription" class="form-control" />
+    <br />
+    <lable>Değerler</lable>
+    <input type="text" asp-for="Attributes" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Hakkımda Ekle Ekle</button>
+</form>

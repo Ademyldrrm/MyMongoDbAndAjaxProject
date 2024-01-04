@@ -2,33 +2,52 @@
 @{
     ViewData["Title"] = "RegiserList";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
-    int count = 0;
 }
 
-<h1>Admin Listeleme Sayfası</h1>
+<section class="content">
 
-<table class="table table-bordered">
-    <tr>
-        <th>Numara</th>
-        <td>#</td>
-        <th>ad Soyad</th>
-        <th>E Mail</th>
-        <th>Şifre</th>
-        <th>Sil</th>
-        <th>Güncelle</th>
-    </tr>
-    @foreach (var item in Model)
-    {
-        count++;
-        <tr>
-            <td>@count</td>
-            <td>@item.RegisterID</td>
-            <td>@item.NameSurname</td>
-            <td>@item.EMail</td>
-            <td>@item.Password</td>
-            <td><a href="/_RegisterAndLoginLayout/DeleteRegister/@item.RegisterID" class="btn btn-danger">Sil</a></td>
-            <td><a href="/_RegisterAndLoginLayout/UpdateRegister/@item.RegisterID" class="btn btn-success">Güncelle</a></td>
-        </tr>
-    }
-</table>
-<a href="/_RegisterAndLoginLayout/CreateRegister">Yeni Referans Girişi</a>
+    <div class="card card-solid">
+        <div class="card-body pb-0">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-12 col-sm-6 col-md-4 d-flex align-items-stretch flex-column">
+                    <div class="card bg-light d-flex flex-fill">
+                        <div class="card-header text-muted border-bottom-0">
+                            Digital Strategist
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="row">
+                                <div class="col-7">
+                                    <h2 class="lead"><b>@item.NameSurname</b></h2>
+                                    <p class="text-muted text-sm"><b>EMail: </b>@item.EMail</p>
+                                    <br />
+                                     <p class="text-muted text-sm"><b>Şifre: </b>@item.Password</p>
+                                    
+                                </div>
+                                <div class="col-5 text-center">
+                                    <img src="@item.Imageurl" alt="user-avatar" class="img-circle img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="text-right">
+                                    <a href="/_RegisterAndLoginLayout/DeleteUser/@item.RegisterID" class="btn btn-sm bg-teal">
+                                    <i class="fas fa-comments">Sil</i>
+                                </a>
+                                <a href="#" class="btn btn-sm btn-primary">
+                                    <i class="fas fa-user"></i> Profili Güncelle
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+                
+            </div>
+        </div>
+
+    </div>
+    <!-- /.card -->
+
+</section>

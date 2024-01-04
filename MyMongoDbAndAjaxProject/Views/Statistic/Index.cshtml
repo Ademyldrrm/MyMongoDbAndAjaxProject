@@ -1,0 +1,35 @@
+﻿@model List<Statistic>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>İstatistik Listeleme Sayfası</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Numara</th>
+        <td>#</td>
+        <th>İstatistik ADı</th>
+        <th>Değeri</th>
+        <th>Açıklaması</th>        
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.StatisticID</td>
+            <td>@item.StatisticName.</td>
+            <td>@item.StatisticValue</td>
+            <td>@item.StatisticDescription</td>
+            <td><a href="/Statistic/DeleteStatistic/@item.StatisticID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Statistic/UpdateStatistic/@item.StatisticID" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/Statistic/CreateStatistic">Yeni Deneyim Girişi</a>
+

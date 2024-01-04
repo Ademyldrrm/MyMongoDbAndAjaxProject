@@ -1,0 +1,14 @@
+﻿@model MessageCategory
+@{
+    ViewData["Title"] = "CreateMessageCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>CreateMessageCategory</h1>
+
+<form method="post">
+    <lable>Mesaj Kategori Adı</lable>
+    <input type="text" asp-for="MessageCategoryName" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary">Mesaj Kategori Ekle</button>
+</form>

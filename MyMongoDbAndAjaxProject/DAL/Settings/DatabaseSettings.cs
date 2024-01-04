@@ -13,6 +13,9 @@
         public string EdicationCollectionName { get; set; }
         public string ProjectCollectionName { get; set; }
         public string RegisterCollectionName { get; set; }
+        public string StatisticCollectionName { get; set; }
+        public string AboutCollectionName { get; set; }
+        public string MessageCategoryCollectionName { get; set; }
     }
 }
 

@@ -24,7 +24,14 @@ namespace MyMongoDbAndAjaxProject.Controllers
         {
             var values = await _registerCollection.Find(x => true).ToListAsync();
             return View(values);
+          
         }
+        public  async Task<IActionResult> DeleteUser(string id)
+        {
+            await _registerCollection.DeleteOneAsync(x => x.RegisterID == id);
+            return RedirectToAction("RegisterList");
+        }
+            
 
         [HttpGet]
         public IActionResult CreateRegister()

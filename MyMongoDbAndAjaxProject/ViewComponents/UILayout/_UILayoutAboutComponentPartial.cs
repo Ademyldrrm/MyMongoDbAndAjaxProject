@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MongoDB.Driver;
+using MyMongoDbAndAjaxProject.DAL.Settings;
 
 namespace MyMongoDbAndAjaxProject.ViewComponents.UILayout
 {
