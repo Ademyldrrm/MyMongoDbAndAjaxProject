@@ -5,6 +5,7 @@ Bu proje, MongoDB ve Ajax kullanılarak oluşturulmuş bir portföy uygulamasıd
 - C#
 - Linq
 - MongoDB
+- Ajax
 
 ![Ekran görüntüsü 2024-01-04 232958](https://github.com/Ademyldrrm/MyMongoDbAndAjaxProject/assets/92265631/33af8932-1359-47a4-bbd4-fe7799897fed)
 ![Ekran görüntüsü 2024-01-04 232943](https://github.com/Ademyldrrm/MyMongoDbAndAjaxProject/assets/92265631/972a97a6-0734-4bfe-b7a8-5847555cb4e5)
