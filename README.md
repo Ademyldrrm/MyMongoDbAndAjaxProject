@@ -1,3 +1,10 @@
+# Portföy Projesi
+Bu proje, MongoDB ve Ajax kullanılarak oluşturulmuş bir portföy uygulamasıdır. 
+# Kullandığı Teknolojiler
+-.Netcore
+-MongoDb
+-Ajax
+
 ![Ekran görüntüsü 2024-01-04 232958](https://github.com/Ademyldrrm/MyMongoDbAndAjaxProject/assets/92265631/33af8932-1359-47a4-bbd4-fe7799897fed)
 ![Ekran görüntüsü 2024-01-04 232943](https://github.com/Ademyldrrm/MyMongoDbAndAjaxProject/assets/92265631/972a97a6-0734-4bfe-b7a8-5847555cb4e5)
 ![Ekran görüntüsü 2024-01-04 232929](https://github.com/Ademyldrrm/MyMongoDbAndAjaxProject/assets/92265631/a19b69d2-bad0-49a8-b5cd-064f20bf5e3e)
