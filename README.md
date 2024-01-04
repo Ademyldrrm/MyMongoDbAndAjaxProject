@@ -1,5 +1,5 @@
 # Portföy Projesi
-Bu proje, MongoDB ve Ajax kullanılarak oluşturulmuş bir portföy uygulamasıdır. 
+Bu proje, MongoDB ve Ajax kullanılarak oluşturulmuş bir portföy uygulamasıdır. Proje, iki ana katmandan oluşmaktadır: biri UI (Kullanıcı Arayüzü), diğeri ise Admin. UI ve Admin katmanları, projenin yüzde 90'ını dinamik olarak oluşturmaktadır.
 ## Kullandığı Teknolojiler
 - .Net Core
 - C#
